@@ -53,6 +53,7 @@
                                             <outlet property="posterView" destination="2Cc-1g-Oax" id="vdE-9n-NEv"/>
                                             <outlet property="synopsisLabel" destination="mi9-3h-MSq" id="M8V-uK-QXu"/>
                                             <outlet property="titleLable" destination="0ah-hL-p80" id="AmQ-cO-fGi"/>
+                                            <segue destination="2SJ-B8-TW4" kind="show" id="9Eb-Qa-Ha8"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -69,6 +70,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.2" y="84.236453201970448"/>
+        </scene>
+        <!--Movie Details View Controller-->
+        <scene sceneID="gCr-JV-1if">
+            <objects>
+                <viewController id="2SJ-B8-TW4" customClass="MovieDetailsViewController" customModule="Flix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QUv-rb-JdL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Vg4-wa-CS3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Aw5-aF-2gh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KOX-dt-bah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1890" y="92"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="F2x-et-wyF">
