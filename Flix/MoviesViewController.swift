@@ -3,7 +3,7 @@
 // last modified: 10/02/20
 // app title: Flix
 // filename: MoviesViewController.swift
-// creation time: 6 hours
+// creation time: 12 hours
 
 //  Copyright © 2020 codepath. All rights reserved.
 
