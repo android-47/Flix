@@ -14,6 +14,7 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -37,11 +38,9 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
               print(error.localizedDescription)
            } else if let data = data {
               let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-            print ("date dictionary", dataDictionary)
             self.movies = dataDictionary["results"] as! [[String:Any]]
              
-            self.collectionView.reloadData() 
-            print (self.movies)
+            self.collectionView.reloadData()
               // TODO: Get the array of movies
               // TODO: Store the movies in a property to use elsewhere
               // TODO: Reload your table view data
@@ -70,6 +69,15 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
         
         return cell
     }
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
 }
 
 
@@ -81,16 +89,7 @@ class MovieGridViewController: UIViewController, UICollectionViewDataSource, UIC
 
 
 
-        // Do any additional setup after loading the view.
+
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 

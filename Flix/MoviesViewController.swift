@@ -1,9 +1,11 @@
-//
-//  MoviesViewController.swift
-//  Flix
-//
-//  Created by Javier Garcia on 9/22/20.
-//
+// author: Javier Garcia Ramirez
+// create date: 9/22/20
+// last modified: 10/02/20
+// app title: Flix
+// filename: MoviesViewController.swift
+// creation time: 6 hours
+
+//  Copyright © 2020 codepath. All rights reserved.
 
 import UIKit
 import AlamofireImage
@@ -20,7 +22,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
-        print ("hello, friends")
         
         let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
@@ -31,7 +32,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
               print(error.localizedDescription)
            } else if let data = data {
               let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-            print ("date dictionary", dataDictionary)
             self.movies = dataDictionary["results"] as! [[String:Any]]
             
             self.tableView.reloadData()
@@ -79,7 +79,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         
-        print ("test")
         
         // Find the selected movie
         
